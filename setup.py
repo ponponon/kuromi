@@ -18,6 +18,8 @@ setup(
     url='http://github.com/ponponon/kuromi',
     packages=find_packages(exclude=['testing']),
     install_requires=[
+        "click",
+        "psutil",
     ],
     extras_require={
     },

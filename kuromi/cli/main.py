@@ -1,17 +1,13 @@
-import os
-import time
-from pathlib import Path
 import click
-from loguru import logger
+import psutil
 
 
 @click.command()
-@click.option('--count', default=1, help='Number of greetings.')
-@click.option('--name', help='The person to greet.')
-def main(count, name):
-    """Simple program that greets NAME for a total of COUNT times."""
-    for x in range(count):
-        click.echo(f"Hello {name}!")
+@click.option('--pid', type=int, help='Specifies the id of the process')
+def main(pid: int):
+    assert isinstance(pid, int)
+    process = psutil.Process(pid)
+    click.echo(f'process name is: {process.name()}')
 
 
 if __name__ == '__main__':
