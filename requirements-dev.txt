@@ -3,3 +3,4 @@ autopep8
 psutil
 pylint
 wheel
+twine
