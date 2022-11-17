@@ -1,7 +1,7 @@
 import os
 from codecs import open
-
 from setuptools import find_packages, setup
+from kuromi import VERSION
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -11,7 +11,7 @@ with open(os.path.join(here, 'README.md'), 'r', 'utf-8') as handle:
 
 setup(
     name='kuromi',
-    version='0.0.1',
+    version=VERSION,
     description='system tool',
     long_description=readme,
     author='ponponon',
